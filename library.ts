@@ -1,5 +1,5 @@
 export function handleDebounce(fn) {
-  let timer;
+  let timer: any;
   const actualFunction = (...args: any[]) => {
     clearInterval(timer);
     timer = setTimeout(() => {
