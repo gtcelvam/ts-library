@@ -1,4 +1,4 @@
-export function debouce(fn) {
+export function handleDebounce(fn) {
   let timer;
   const actualFunction = (...args: any[]) => {
     clearInterval(timer);
@@ -9,7 +9,7 @@ export function debouce(fn) {
   return actualFunction();
 }
 
-export function throttle(mainFunction, delay: number) {
+export function handleThrottle(mainFunction, delay: number) {
   let timerFlag: number | null = null; // Variable to keep track of the timer
 
   // Returning a throttled version
