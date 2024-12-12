@@ -1,0 +1,6 @@
+{
+  "name": "ts-library",
+  "version": "1.0.0",
+  "main": "library.js",
+  "type": "module"
+}
