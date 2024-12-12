@@ -1,6 +1,6 @@
 export function debouce(fn) {
   let timer;
-  const actualFunction = (...args) => {
+  const actualFunction = (...args: any[]) => {
     clearInterval(timer);
     timer = setTimeout(() => {
       fn.apply(this, args);
@@ -9,11 +9,11 @@ export function debouce(fn) {
   return actualFunction();
 }
 
-export function throttle(mainFunction, delay) {
-  let timerFlag = null; // Variable to keep track of the timer
+export function throttle(mainFunction, delay: number) {
+  let timerFlag: number | null = null; // Variable to keep track of the timer
 
   // Returning a throttled version
-  return (...args) => {
+  return (...args: any[]) => {
     if (timerFlag === null) {
       // If there is no timer currently running
       mainFunction(...args); // Execute the main function
